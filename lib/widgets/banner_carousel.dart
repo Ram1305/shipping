@@ -87,6 +87,7 @@ class _BannerCarouselState extends State<BannerCarousel> {
               );
             }).toList(),
           ),
+          const SizedBox(height: 10),
         ],
       ),
     );

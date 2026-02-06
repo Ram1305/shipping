@@ -5,6 +5,7 @@ import 'package:neopop/widgets/buttons/neopop_tilted_button/neopop_tilted_button
 import '../utils/colors.dart';
 import '../utils/colors.dart' as Color;
 import '../widgets/banner_carousel.dart';
+import '../widgets/bottom_banner.dart';
 import '../widgets/service_grid.dart';
 import '../widgets/footer_widget.dart';
 import '../widgets/utility_tools.dart';
@@ -35,6 +36,16 @@ class HomeScreen extends StatelessWidget {
     final banners = [
       AppConstants.banner1,
       AppConstants.banner2,
+    ];
+    final bottomBanners = [
+      AppConstants.bottomBanner1,
+      AppConstants.bottomBanner2,
+      AppConstants.bottomBanner3,
+      AppConstants.bottomBanner4,
+      AppConstants.bottomBanner5,
+      AppConstants.bottomBanner6,
+      AppConstants.bottomBanner7,
+      AppConstants.bottomBanner8,
     ];
 
     return Scaffold(
@@ -231,7 +242,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            BannerCarousel(bannerPaths: banners),
+            BottomBanner(bannerPaths: bottomBanners),
             // Company List
             // CompanyList(companies: companies),
             

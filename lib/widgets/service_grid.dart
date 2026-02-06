@@ -19,19 +19,20 @@ class ServiceGrid extends StatelessWidget {
       {'name': 'Rental', 'icon': AppConstants.iconRental},
     ];
 
-    return Container(
-      color: AppColors.background,
-      // padding: const EdgeInsets.fromLTRB(14, 12, 14, 0),
-      child: GridView.builder(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 4,
-          // crossAxisSpacing: 10,
-          // mainAxisSpacing: 10,
-          childAspectRatio: 1.0,
-        ),
-        itemCount: services.length,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          color: AppColors.background,
+          child: GridView.builder(
+            padding: EdgeInsets.zero,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 4,
+              childAspectRatio: 1.0,
+            ),
+            itemCount: services.length,
         itemBuilder: (context, index) {
           final service = services[index];
           return _ServiceCard(
@@ -39,7 +40,9 @@ class ServiceGrid extends StatelessWidget {
             iconPath: service['icon']!,
           );
         },
-      ),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -56,7 +59,7 @@ class _ServiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(color: Colors.white,
-      elevation: 2,
+      elevation: 0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8),
       ),

@@ -7,6 +7,16 @@ class AppConstants {
   static const String splashIcon = 'assets/images/splash/splash_icon.png';
   static const String banner1 = 'assets/images/banners/banner1.png';
   static const String banner2 = 'assets/images/banners/banner2.png';
+
+  // Bottom banner (8 images in horizontal scroll – replace with your assets)
+  static const String bottomBanner1 = 'assets/images/banners/bottom_banner1.png';
+  static const String bottomBanner2 = 'assets/images/banners/bottom_banner2.png';
+  static const String bottomBanner3 = 'assets/images/banners/bottom_banner3.png';
+  static const String bottomBanner4 = 'assets/images/banners/bottom_banner4.png';
+  static const String bottomBanner5 = 'assets/images/banners/bottom_banner5.png';
+  static const String bottomBanner6 = 'assets/images/banners/bottom_banner6.png';
+  static const String bottomBanner7 = 'assets/images/banners/bottom_banner7.png';
+  static const String bottomBanner8 = 'assets/images/banners/bottom_banner8.png';
   
   // Icon paths
   static const String iconSea = 'assets/images/icons/sea.png';
