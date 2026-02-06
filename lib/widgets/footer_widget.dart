@@ -26,7 +26,7 @@ class FooterWidget extends StatelessWidget {
       Icons.alternate_email, // Twitter alternative
       Icons.business, // LinkedIn alternative
       Icons.camera_alt, // Instagram alternative
-      Icons.share,
+      // Icons.share,
     ];
 
     return Container(
@@ -60,30 +60,30 @@ class FooterWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'Share:',
-                style: GoogleFonts.inter(
-                  color: AppColors.textWhite,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              // Text(
+              //   'Share:',
+              //   style: GoogleFonts.inter(
+              //     color: AppColors.textWhite,
+              //     fontSize: 16,
+              //     fontWeight: FontWeight.bold,
+              //   ),
+              // ),
               const SizedBox(width: 15),
-              ...socialIcons.map((icon) {
-                return Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 8),
-                  child: IconButton(
-                    onPressed: () {
-                      // TODO: Implement share functionality
-                    },
-                    icon: Icon(
-                      icon,
-                      color: AppColors.textWhite,
-                      size: 24,
-                    ),
-                  ),
-                );
-              }),
+              // ...socialIcons.map((icon) {
+              //   return Container(
+              //     margin: const EdgeInsets.symmetric(horizontal: 8),
+              //     child: IconButton(
+              //       onPressed: () {
+              //         // TODO: Implement share functionality
+              //       },
+              //       icon: Icon(
+              //         icon,
+              //         color: AppColors.textWhite,
+              //         size: 24,
+              //       ),
+              //     ),
+              //   );
+              // }),
             ],
           ),
           const SizedBox(height: 20),

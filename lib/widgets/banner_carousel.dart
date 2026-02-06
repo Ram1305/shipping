@@ -29,7 +29,7 @@ class _BannerCarouselState extends State<BannerCarousel> {
         children: [
           CarouselSlider(
             options: CarouselOptions(
-              height: widget.height ?? 150,
+              height:  150,
               autoPlay: true,
               autoPlayInterval: const Duration(
                 seconds: AppConstants.bannerAutoPlayInterval,
@@ -48,44 +48,21 @@ class _BannerCarouselState extends State<BannerCarousel> {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: BoxDecoration(
-                      color: AppColors.primary.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(30),
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 2,
+                      ),
                     ),
-                    clipBehavior: Clip.antiAlias,
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(30),
                       child: Image.asset(
                         bannerPath,
-                        fit: BoxFit.contain,
-                        errorBuilder: (context, error, stackTrace) {
-                          return Container(
-                            color: AppColors.primary.withOpacity(0.2),
-                            child: Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.image,
-                                    size: 64,
-                                    color: AppColors.primary,
-                                  ),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    'Banner Image',
-                                    style: GoogleFonts.inter(
-                                      color: AppColors.primary,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          );
-                        },
+                        // fit: BoxFit.contain,
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                        height: double.infinity,
                       ),
                     ),
                   );
@@ -93,7 +70,7 @@ class _BannerCarouselState extends State<BannerCarousel> {
               );
             }).toList(),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 4),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: widget.bannerPaths.asMap().entries.map((entry) {

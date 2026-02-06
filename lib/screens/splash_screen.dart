@@ -37,8 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Image.asset(
               AppConstants.splashIcon,
-              width: 150,
-              height: 150,
+
               errorBuilder: (context, error, stackTrace) {
                 return Icon(
                   Icons.local_shipping,
@@ -47,19 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 );
               },
             ),
-            const SizedBox(height: 30),
-            Text(
-              AppConstants.appName,
-              style: GoogleFonts.inter(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-                color: AppColors.textWhite,
-              ),
-            ),
-            const SizedBox(height: 20),
-            const CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(AppColors.textWhite),
-            ),
+
           ],
         ),
       ),
